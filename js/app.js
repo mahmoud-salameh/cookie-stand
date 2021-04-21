@@ -40,9 +40,7 @@ PatCookies.prototype.getcookie = function (min, max) {
 
 new PatCookies('seattle', 23, 65, 6.3);
 
-
 new PatCookies('Tokyo', 3, 24, 1.2);
-
 
 new PatCookies('Dubai', 11, 38, 3.7);
 
