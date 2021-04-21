@@ -1,6 +1,7 @@
 'use strict';
 
-const table = document.createElement('table');
+
+const table = document.getElementById('tabledata');
 
 function getRandomnumber(min, max) {
   min = Math.ceil(min);
@@ -9,7 +10,7 @@ function getRandomnumber(min, max) {
 
 }
 
-let hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2m', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+let hour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2m', '3pm', '4pm', '5pm', '6pm', '7pm'];
 // eslint-disable-next-line no-unused-vars
 const parenet = document.getElementById('salmonCookies');
 function PatCookies(name, min, max, avg){
@@ -27,7 +28,7 @@ function PatCookies(name, min, max, avg){
 PatCookies.allcitys = [];
 
 
-PatCookies.prototype.getcookie = function () {
+PatCookies.prototype.getcookie = function (min, max) {
   for (let i = 0; i < hour.length; i++){
     let number = Math.ceil(getRandomnumber(this.min, this.max) *this.avg);
     this.total = this.total+number;
@@ -37,28 +38,28 @@ PatCookies.prototype.getcookie = function () {
 
 };
 
-let seattle = new PatCookies('seattle', 23, 65, 6.3);
-seattle.getcookie();
+new PatCookies('seattle', 23, 65, 6.3);
 
-let tokyo= new PatCookies('Tokyo', 3, 24, 1.2);
-tokyo.getcookie();
 
-let dubai = new PatCookies('Dubai', 11, 38, 3.7);
-dubai.getcookie();
-let paris = new PatCookies('Paris', 20, 38, 2.3);
-paris.getcookie();
-let lima = new PatCookies('Lima', 2, 16, 4.6);
-lima.getcookie();
+new PatCookies('Tokyo', 3, 24, 1.2);
+
+
+new PatCookies('Dubai', 11, 38, 3.7);
+
+new PatCookies('Paris', 20, 38, 2.3);
+
+new PatCookies('Lima', 2, 16, 4.6);
+
 
 PatCookies.prototype.render = function (){
 
   this.getcookie();
 
   const tr = document.createElement('tr');
-  table.appendChild('tr');
+  table.appendChild(tr);
 
   let td =document.createElement('td');
-  tr.appendChild('td');
+  tr.appendChild(td);
   td.textContent =this.name;
 
   for(let i = 0; i < hour.length; i++){
@@ -68,7 +69,7 @@ PatCookies.prototype.render = function (){
 
   }
   let td1 = document.createElement('td');
-  tr.appendChild('td1');
+  tr.appendChild(td1);
   td1.textContent =this.total;
 };
 
@@ -78,9 +79,9 @@ function headRaw(){
 
   let th = document.createElement('th');
   tr1.appendChild(th);
-  th.textContent = '';
+  th.textContent = 'citys';
 
-  for(let i = 0; i < hour.length; i++);{
+  for(let i = 0; i < hour.length; i++){
     let th =document.createElement('th');
     tr1.appendChild(th);
     th.textContent = hour[i];
