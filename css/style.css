@@ -10,23 +10,20 @@ body {
 }
 
 header {
-  text-align: center;
-  background: #383e56;
+  
+  
   margin-bottom: 20px;
 }
 
 header h1 {
   line-height: 50px;
-  color: #fff;
+  color: #fb743e;
 }
 
 main {
   margin: 0 20px;
 }
 
-main > h2 {
-  font-weight: 700;
-}
 
 ul {
   list-style-type: disc;
@@ -44,11 +41,12 @@ table {
   text-align: center;
 }
 
-td, th {
+td, th{
   border: 1px solid #ccc;
   padding: 5px 10px;
+
 }
 
 th {
-  background-color: #325288;
+  background-color: #4c6fac;
   color: #fff;
