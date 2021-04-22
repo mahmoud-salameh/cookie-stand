@@ -120,6 +120,25 @@ main article h2 {
   font-weight: 700;
   text-transform: capitalize;
 } */
+fieldset {
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  
+}
+legend {
+  background-color: #4c6fac;
+  color: coral;
+  padding: 5px 10px;
+}
+
+input {
+  margin: 5px;
+}
 
 table {
   border-collapse: collapse;
@@ -134,4 +153,4 @@ td, th{
 
 th {
   background-color: #4c6fac;
-  color: #fff; 
+  color: coral; 
