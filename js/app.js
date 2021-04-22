@@ -3,6 +3,8 @@
 
 const table = document.getElementById('tabledata');
 
+const newBranch = document.getElementById('userinput');
+
 function getRandomnumber(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -116,12 +118,50 @@ function tfooter(){
   th2.textContent = totalTotals;
 }
 
+newBranch.addEventListener('submit', eventButton);
+
+function eventButton(event) {
+  event.preventDefault();
+  const name = event.target.city.value;
+  const min = event.target.minS.value;
+  const max = event.target.maxS.value;
+  const avg = event.target.avgS.value;
+
+  let newBranch = new PatCookies(name, min, max, avg);
+  // console.log(name, min, max, avg);
+
+  newBranch.render();
+  table.deleteRow(name.length - 1);
+  tfooter();
+  newBranch.reset();
+
+
+
+}
+
+
 
 function render() {
   for(let i = 0; i < PatCookies.allcitys.length; i++){
     PatCookies.allcitys[i].render();
   }
 }
+
+
 headRaw();
 render();
 tfooter();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
