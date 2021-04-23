@@ -131,10 +131,8 @@ function eventButton(event) {
   // console.log(name, min, max, avg);
 
   newBranch.render();
-  table.deleteRow(name.length - 1);
+  document.getElementById('tabledata').deleteRow(PatCookies.allcitys.length);
   tfooter();
-  newBranch.reset();
-
 
 
 }
@@ -153,7 +151,7 @@ render();
 tfooter();
 
 
-
+console.log(table);
 
 
 
