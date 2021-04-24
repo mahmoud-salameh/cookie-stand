@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
 
 .container {
   display: grid;
@@ -9,19 +10,19 @@
 
 
 body {
-  
+  background-color: rgb(58, 129, 129);
   margin: auto;
   line-height: 1.5;
   display: grid;
   grid-template-rows: 1fr 700px 50px;
   width: 1100px;
-  font-family: 'Roboto', sans-serif;
+ 
   
 }
 
 
 header {
-  font-family: 'Lato', sans-serif;
+ 
   display: grid;
   
   align-items: center;
@@ -52,35 +53,45 @@ header {
 }
 
 p {
+  
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
-  color: coral;
+  
 }
 
 h1 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Goudy Bookletter 1911', serif;
   margin-top: auto;
   text-transform: uppercase;
-  color: coral;
+  color: black;
 }
 
 
 main ul li{
-  color: cornflowerblue;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: rgb(219, 217, 62);
+  
   font-family: 'Lato', sans-serif;
 }
 
 
 
+#ulli p{
+
+  font-family: 'Goudy Bookletter 1911', serif;
+}
 
 
+#tabledata{
+  font-weight: 700;
+  font-family: 'Noto Sans JP', sans-serif;
+}
 
 
-
-
-
-
-
+#tabledata:nth-child(odd){
+  color: rgb(0, 0, 0);
+  
+}
 
 
 
@@ -131,8 +142,8 @@ fieldset {
   
 }
 legend {
-  background-color: #4c6fac;
-  color: coral;
+  background-color: black;
+  color: rgb(138, 112, 252);
   padding: 5px 10px;
 }
 
@@ -152,5 +163,6 @@ td, th{
 }
 
 th {
-  background-color: #4c6fac;
-  color: coral; 
+  background-color: black;
+  color: rgb(138, 112, 252); 
+}
